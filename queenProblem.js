@@ -11,7 +11,7 @@ function solve(n) {
 
 
     // The recursive function always return false, so that result can store as much solutions as possible.
-    
+
     function recursive(board, row, n) {
         if (row === n) {
             result.push(board.map(row => row.join('')));
@@ -23,7 +23,6 @@ function solve(n) {
                 board[row][column] = 'Q';
 
                 if (recursive(board, row + 1, n)) return true;
-
                 board[row][column] = '.';
             }
         }
